@@ -25,9 +25,11 @@ while (input !== 'quit') {
     toDoList.push(task);
     console.log(`${task} added to your list`);
   } else if (input === 'list') {
+    console.log('***********')
     for (let i = 0; i < toDoList.length; i++) {
       console.log(`${i}: ${toDoList[i]}`);
     }
+    console.log('***********')
   } else if (input === 'delete') {
     let remove = prompt('Index of task to delete');
     toDoList.splice(remove, 1);
