@@ -15,23 +15,25 @@
 //    - While
 // - Conditional
 
-const toDoList = [];
 let input = prompt('What would you like to do?');
-
-if (input === 'quit') {
-  console.log('You quit already?!')
-}
+const toDoList = [];
 
 while (input !== 'quit') {
-  // let input = prompt('What would you like to do?');
+  let input = prompt('What would you like to do?');
   if (input === 'new') {
     let task = prompt('Name of task');
     toDoList.push(task);
+    console.log(`${task} added to your list`);
   } else if (input === 'list') {
     for (let i = 0; i < toDoList.length; i++) {
       console.log(`${i}: ${toDoList[i]}`);
     }
   } else if (input === 'delete') {
-    prompt('Index of task to delete').toDoList[i].splice;
+    let remove = prompt('Index of task to delete');
+    toDoList.splice(remove, 1);
+    console.log('Task deleted')
+  } else if (input === 'quit') {
+    console.log('You quit already?!')
+    break;
   }
 }
